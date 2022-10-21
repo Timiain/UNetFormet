@@ -1,0 +1,69 @@
+{
+    "dataset": "vaihingen",
+    "method": "fcn_segmentor",
+    "pretrained": "None",
+    "data": {
+      "num_classes": 6
+    },
+    "checkpoints": {
+      "checkpoints_name": "fs_baseocnet_vaihingen_seg",
+      "checkpoints_dir": "./checkpoints/vaihingen",
+      "save_iters": 1000
+    },
+    "network":{
+      "backbone": "deepbase_resnet101_dilated8",
+      "multi_grid": [1, 1, 1],
+      "model_name": "base_ocnet",
+      "bn_type": "torchbn",
+      "stride": 8,
+      "factors": [[8, 8]],
+      "pretrained":"None",
+      "loss_weights": {
+        "corr_loss": 0.01,
+        "aux_loss": 0.4,
+        "seg_loss": 1.0
+      }
+    },
+    "logging": {
+      "logfile_level": "info",
+      "stdout_level": "info",
+      "log_file": "./log/vaihingen/fs_baseocnet_vaihingen_seg.log",
+      "log_format": "%(asctime)s %(levelname)-7s %(message)s",
+      "rewrite": true
+    },
+    "lr": {
+      "base_lr": 0.01,
+      "metric": "iters",
+      "lr_policy": "lambda_poly",
+      "step": {
+        "gamma": 0.5,
+        "step_size": 100
+      }
+    },
+    "solver": {
+      "display_iter": 10,
+      "test_interval": 2000,
+      "max_iters": 40000
+    },
+    "loss": {
+      "loss_type": "fs_auxce_loss",
+      "params": {
+        "ce_weight": [1,1,1,1,1,1],
+        "ce_reduction": "elementwise_mean",
+        "ce_ignore_index": -1,
+        "ohem_minkeep": 100000,
+        "ohem_thresh": 0.9
+      }
+    },
+    "protoseg": {
+      "gamma": 0.999,
+      "loss_ppc_weight": 0.01,
+      "loss_ppd_weight": 0.001,
+      "num_prototype": 10,
+      "pretrain_prototype": false,
+      "use_rmi": false,
+      "use_prototype": true,
+      "update_prototype": true,
+      "warmup_iters": 0
+    }
+}
