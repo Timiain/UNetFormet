@@ -1,0 +1,4 @@
+python ./train_supervision_vote.py --config ./config/vaihingen/unetformer_vote.py > unetformer_cascadvote_train_vaihingen_RERFRRN_512_100.txt
+#python ./vaihingen_test.py -c ./config/vaihingen/unetformer_vote.py -o ./fig_results/vaihingen/unetformer-vote-res18 --rgb > unetformer_vaihingen_vote_RERFRRN_512_100.txt
+#python ./vaihingen_test.py -c ./config/vaihingen/unetformer_vote.py -o ./fig_results/vaihingen/unetformer-vote-res18_lr --rgb -t 'lr' > unetformer_vaihingen_vote_RERFRRN_512_100_lr.txt
+#python ./vaihingen_test.py -c ./config/vaihingen/unetformer_vote.py -o ./fig_results/vaihingen/unetformer-vote-res18_d4 --rgb -t 'd4' > unetformer_vaihingen_vote_RERFRRN_512_100_d4.txt

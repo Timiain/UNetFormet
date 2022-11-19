@@ -117,11 +117,14 @@ work_dirs/
 work_dirs*
 work_dirs*/
 mmseg/.mim
+test_out_vote/
+test_out_*/
 
 data/
 model_weights/
 lightning_logs/
 fig_results/
+data*/
 
 # Pytorch
 *.pth

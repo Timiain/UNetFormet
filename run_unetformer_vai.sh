@@ -1,4 +1,4 @@
 python ./train_supervision.py --config ./config/vaihingen/unetformer.py > unetformer_trainv2_vaihingen_RERFRRN_512.txt
-python ./vaihingen_test.py -c ./config/vaihingen/unetformer.py -o ./fig_results/vaihingen/unetformer-res18 --rgb > unetformer_testv2_vaihingen_RERFRRN_512.txt
-python ./vaihingen_test.py -c ./config/vaihingen/unetformer.py -o ./fig_results/vaihingen/unetformer-res18_lr --rgb -t 'lr' > unetformer_testv2_vaihingen_RERFRRN_512_lr.txt
-python ./vaihingen_test.py -c ./config/vaihingen/unetformer.py -o ./fig_results/vaihingen/unetformer-res18_d4 --rgb -t 'd4' > unetformer_testv2_vaihingen_RERFRRN_512_d4.txt
+# python ./vaihingen_test.py -c ./config/vaihingen/unetformer.py -o ./fig_results/vaihingen/unetformer-res18 --rgb > unetformer_testv2_vaihingen_RERFRRN_512.txt
+# python ./vaihingen_test.py -c ./config/vaihingen/unetformer.py -o ./fig_results/vaihingen/unetformer-res18_lr --rgb -t 'lr' > unetformer_testv2_vaihingen_RERFRRN_512_lr.txt
+# python ./vaihingen_test.py -c ./config/vaihingen/unetformer.py -o ./fig_results/vaihingen/unetformer-res18_d4 --rgb -t 'd4' > unetformer_testv2_vaihingen_RERFRRN_512_d4.txt

@@ -1,0 +1,15 @@
+/disk1/lhl/env/airs/lib/python3.8/site-packages/torch/functional.py:478: UserWarning:
+
+torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1659484657607/work/aten/src/ATen/native/TensorShape.cpp:2895.)
+
+test_out_vote/main/ 目录已存在
+test_out_vote/head_1/ 目录已存在
+test_out_vote/head_2/ 目录已存在
+test_out_vote/confid_vote/ 目录已存在
+test_out_vote/prob_vote/ 目录已存在
+Traceback (most recent call last):
+  File "./vaihingen_test_cascadvote.py", line 268, in <module>
+    main()
+  File "./vaihingen_test_cascadvote.py", line 121, in main
+    evaluator = Evaluatorv2(num_class=config.num_classes,out_folder='{}/confid_vote/'.format(args.output_path))
+NameError: name 'Evaluatorv2' is not defined

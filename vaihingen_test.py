@@ -83,8 +83,8 @@ def main():
                 tta.HorizontalFlip(),
                 tta.VerticalFlip(),
                 #tta.Rotate90(angles=[90]),
-                #tta.Scale(scales=[0.5, 0.75, 1.0, 1.25, 1.5], interpolation='bicubic', align_corners=False)
-                tta.Scale(scales=[0.75, 1.0, 1.25], interpolation='bicubic', align_corners=False)
+                tta.Scale(scales=[0.5, 0.75, 1.0, 1.25, 1.5], interpolation='bicubic', align_corners=False)
+                #tta.Scale(scales=[0.75, 1.0, 1.25], interpolation='bicubic', align_corners=False)
 
             ]
         )

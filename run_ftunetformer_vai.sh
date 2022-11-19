@@ -1,0 +1,4 @@
+python ./train_supervision.py --config ./config/vaihingen/ftunetformer.py > ftunetformer_trainv2_vaihingen_RERFRRN_512_100.txt
+#python ./vaihingen_test.py -c ./config/vaihingen/ftunetformer.py -o ./fig_results/vaihingen/ftunetformer-res18 --rgb > ftunetformer_testv2_vaihingen_RERFRRN_512_100.txt
+#python ./vaihingen_test.py -c ./config/vaihingen/ftunetformer.py -o ./fig_results/vaihingen/ftunetformer-res18_lr --rgb -t 'lr' > ftunetformer_testv2_vaihingen_RERFRRN_512_100_lr.txt
+#python ./vaihingen_test.py -c ./config/vaihingen/ftunetformer.py -o ./fig_results/vaihingen/ftunetformer-res18_d4 --rgb -t 'd4' > ftunetformer_testv2_vaihingen_RERFRRN_512_100_d4.txt

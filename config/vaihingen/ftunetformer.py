@@ -8,8 +8,8 @@ from catalyst import utils
 # training hparam
 max_epoch = 45
 ignore_index = len(CLASSES)
-train_batch_size = 8
-val_batch_size = 4
+train_batch_size = 2
+val_batch_size = 2
 lr = 6e-4
 weight_decay = 2.5e-4
 backbone_lr = 6e-5
@@ -69,6 +69,5 @@ net_params = utils.process_model_params(net, layerwise_params=layerwise_params)
 base_optimizer = torch.optim.AdamW(net_params, lr=lr, weight_decay=weight_decay)
 optimizer = Lookahead(base_optimizer)
 lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=15, T_mult=2)
-
 
 
